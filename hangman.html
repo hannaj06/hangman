@@ -11,6 +11,7 @@ $(document).ready(function(){
 	// word should be encrypted and than decrypted
 	var word = 'hangman';
 	var wrong_guess = 0;
+  var correct_guess = 0;
   $('.graphic').hide()
 
 	$('button.btn-default').click(function(){
@@ -24,6 +25,7 @@ $(document).ready(function(){
 			for (var i=0; i<word.length; i++){
 				if(word[i] === selected){ 
 					index.push(i);
+          correct_guess += 1;
 				}
 			}
 		// display letter in the right place
